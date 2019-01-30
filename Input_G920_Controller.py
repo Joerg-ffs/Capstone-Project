@@ -1,8 +1,3 @@
-#!/usr/bin/python
-# Control openxc-vehicle-simulator from a Logitech G27 controller
-# by Juergen Schmerder (@schmerdy)
-# inspired by https://github.com/moozer/CameraBot/blob/master/src/deviceinfo.py
-
 import pygame
 import math
 import os
@@ -42,7 +37,7 @@ high_beam_status = False
 windshield_wiper_status = False
 axis_mode = 1
 ButtonList = []
-statusList = [0,0,0]
+statusList = [0,0,0,0]
 def send_data(name, value):
     #Fetching and recording the useful inputs
     if name == "angle":
@@ -51,6 +46,8 @@ def send_data(name, value):
         statusList[1] = value
     elif name == "brake":
         statusList[2] = value
+    elif name == "distraction":
+        statusList[3] = value
     ButtonList.append(statusList)
     
     #Writing the data to a text file for training purposes
@@ -63,7 +60,7 @@ def pedal_value(value):
   between -1 (fully pressed) and 1 (not pressed)
   normalizing to value between 0 and 100%'''
   return (1 - value) * 50
-
+toggle = 0
 pygame.init()                        
 
 try: 
@@ -82,6 +79,17 @@ try:
   while True:
     for event in pygame.event.get(pygame.QUIT):
       exit(0)
+    for event in pygame.event.get():
+      if event.type == pygame.KEYDOWN:
+          if event.key == pygame.K_KP_ENTER:
+              toggle = 0
+          elif event.key == pygame.K_KP_PLUS:
+              toggle = 1
+          send_data("distraction", toggle)      
+      if toggle == 0:
+          print('0')
+      elif toggle == 1:
+          print('1')
     for event in pygame.event.get(pygame.JOYAXISMOTION):
         if DEBUG:
             print("Motion on axis: ", event.axis)
