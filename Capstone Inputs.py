@@ -3,15 +3,15 @@ import mss
 import mss.tools
 from inputs import get_gamepad
 
-
 def main():
     #The screen part to capture
-    monitor = {'top': 300, 'left': 250, 'width': 900, 'height': 420}
+    #Camera Mode:6, windowed 720
+    monitor = {'top': 537, 'left': 866, 'width': 191, 'height': 74}
     toggle_recording = False
     count = 0
     statusList = [0,0,0,0]
     #statusList = [0,0]
-
+    
     def send_data(name, value):
         
         #Fetching and recording the useful inputs
@@ -25,7 +25,7 @@ def main():
             statusList[1] = str(output)
 
             #Writing the data to a csv file for training purposes
-            with open(r"test_4_csv.csv", "a", newline='') as f:
+            with open(r"test_5.csv", "a", newline='') as f:
                 writer = csv.writer(f)
                 writer.writerow(statusList)
 
@@ -56,7 +56,7 @@ def main():
                         # Grab the data
                         sct_img = sct.grab(monitor)
                         #Save to the picture file
-                        mss.tools.to_png(sct_img.rgb, sct_img.size, output)
+                        mss.tools.to_png(sct_img.rgb, sct_img.size, output=output)
                         send_data("image", output)
                         
                 elif toggle_recording == False:
