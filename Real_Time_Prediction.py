@@ -1,4 +1,4 @@
-import csv
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -87,7 +87,7 @@ def main():
                         send_data('angle', event.value)
 
                         # Screen Capture, and image file storage
-                        output = '/media/joerg/OS_Install/Users/Joerg/Desktop/Capstone-Project-master/frames/real_img-{}.png'.format("1")
+                        output = '/media/joerg/OS_Install/Users/Joerg/Desktop/Capstone-Project-master/predict/real_img-1.png'
                         # Compressing the image
                         sct.compression_level = 2
                         # Grab the data
@@ -101,14 +101,13 @@ def main():
                         X = img_array
                         X = np.array(X).reshape(-1, IMG_WIDTH, IMG_HEIGHT,3)  # Trailing 1 represents 1 dimensions due to grayscale -> 3 for colour
                         X = X / 255.0  # Normalize image data devide by 255 pixels
-                        print(X)
-                        print(X.shape)
+
                         y = model.predict(X, verbose=0)
-                        print(y[0])
+                        os.remove(output)
 
                         # compare actual vs predicted angle
                         print('Actual angle: ' + str(event.value))
-                        print('Predicted angle: ' + str(model.predict(X, verbose=0)*65535))
+                        print('Predicted angle: ' + str(model.predict(np.array(X), verbose=0)))
 
                 elif toggle_recording == False:
                     print("Recording Paused")
