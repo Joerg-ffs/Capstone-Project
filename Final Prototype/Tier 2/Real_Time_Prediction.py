@@ -23,7 +23,7 @@ def coeff_determination(y_true, y_pred):
 def main():
     
     #Loading the previously trained Tier 1 model
-    model = load_model('Capstone2.h5', custom_objects={'coeff_determination': coeff_determination})
+    model = load_model('Tier_1_model.h5', custom_objects={'coeff_determination': coeff_determination})
     
     # Loading the previously trained Tier 2 model
     ERF = pickle.load(open('Tier_2_model.pkl', 'rb'))
