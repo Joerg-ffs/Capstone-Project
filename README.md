@@ -9,7 +9,7 @@ To use this prototype check out the prototype folder.
 Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9tYzt1Xt7s/view)
 
 ## Final Prototype
-The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the ERT model from the initial prototype.
+The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the Extreme Random Forest model similarly to the initial prototype.
 
 ### Tier 1
 This project uses the Logitech G920 Racing Wheel to capture inputs. However, any racing wheel can be used as long as the event codes are properly mapped using device_config.py.
