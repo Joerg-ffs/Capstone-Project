@@ -27,7 +27,7 @@ def main():
     monitor = {'top': 437, 'left': 766, 'width': 400, 'height': 300}
     
     #Saved Tier 1 model
-    model = load_model('Capstone.h5', custom_objects={'coeff_determination': coeff_determination})   
+    model = load_model('Tier_1_Model.h5', custom_objects={'coeff_determination': coeff_determination})   
     
     #List for collected inputs
     statusList = [0, 0, 0, 0, 0]
