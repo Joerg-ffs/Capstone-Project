@@ -11,10 +11,12 @@ Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9
 ## Final Prototype
 The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the Extreme Random Forest model similarly to the initial prototype.
 
-### Tier 1
-This project uses the Logitech G920 Racing Wheel to capture inputs. However, any racing wheel can be used as long as the event codes are properly mapped using device_config.py.
+## Tier 1
+This project uses the Logitech G920 Racing Wheel and acompanying pedals to capture inputs. However, any racing wheel or other form of input can be used as long as the event codes are properly mapped using device_config.py.
 
 To start collecting data, use Inputs_G920.py in the Tier 1 folder. This file will output a folder of images as well as a csv file containg image paths and corrosponding angles.
+
+## Please note: This project will only function using Ubuntu due to the usage of evdev python library for input polling.
 
 Sample data can be found here: [images](https://drive.google.com/file/d/1ZrqJtPqAVVuZAycNJN9hl2rEKFiiJ80-/view) and [csv](https://drive.google.com/file/d/1996maLE5TBk1y27EInuKVQmH3TUtaa3F/view?usp=sharing)
 
