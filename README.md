@@ -24,7 +24,7 @@ These inputs are then loaded into Tier_1_Training.ipynb in the Tier 1 folder. On
 
 The .h5 file is then used in Inputs_G920_Distraction.py in the Tier 2 folder. This will generate a csv file containing actual and predicted angles as well as gas and brake values. An example csv is [here](https://drive.google.com/open?id=1r5CpDfeUh8HH-mqdJl6BhRxLJxrpq-4C)
 
-This csv file is usedin Tier_2_Training.ipynb to create another model file in a .pkl format. An example is Tier_2_Model.pkl.
+This csv file is usedin Tier_2_Training.ipynb to create another model file in a .pkl format. An example is [Tier_2_Model.pkl](https://drive.google.com/file/d/13EaXiiwL8QkGVRmzWvlR6II9gzFNARvz/view?usp=sharing)
 
 Both model files are used in Real_Time_Prediction.py to predict distraction levels real time.
 
