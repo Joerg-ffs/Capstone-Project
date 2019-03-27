@@ -12,7 +12,7 @@ Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9
 The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the ERT model from the initial prototype.
 
 ### Tier 1
-This project uses the Logitech G920 Racing Wheel to capture inputs. However, any racing wheel can be used as long as the event codes are properly mapped.
+This project uses the Logitech G920 Racing Wheel to capture inputs. However, any racing wheel can be used as long as the event codes are properly mapped using device_config.py.
 
 To start collecting data, use Inputs_G920.py in the Tier 1 folder. This file will output a folder of images as well as a csv file containg image paths and corrosponding angles.
 
