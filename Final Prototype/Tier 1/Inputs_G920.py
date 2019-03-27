@@ -81,6 +81,5 @@ def main():
                 elif toggle_recording == False:
                     print("Recording Paused")
 
-
 if __name__ == "__main__":
     main()
