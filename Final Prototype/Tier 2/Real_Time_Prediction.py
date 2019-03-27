@@ -26,7 +26,7 @@ def main():
     model = load_model('Capstone2.h5', custom_objects={'coeff_determination': coeff_determination})
     
     # Loading the previously trained Tier 2 model
-    ERF = pickle.load(open('ERFtest3.pkl', 'rb'))
+    ERF = pickle.load(open('Tier_2_model.pkl', 'rb'))
     
     # The screen part to capture
     # Camera Mode:1, windowed 720
