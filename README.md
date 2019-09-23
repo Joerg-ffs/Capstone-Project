@@ -37,6 +37,7 @@ Demo video of final prototype found [here](https://drive.google.com/open?id=1Q2n
 The next level of the models development transitions from using Euro Truck Simulator to real world test data. The data is 300 hours of commuting along California highways and can be found [here](https://github.com/commaai/comma2k19) 
 
 The data was originally in video formatt with 15 frames per second. The data was manipulated from video to jpeg fromatt and adjusted to insure the driving data (steering, brakes, acceleration, etc) was present accross all frames. Outliers in the steering angle data were removed as the focus of the model is highway driving distraction where large changes in steering angle are not relevant. 
+Sample data can be found [here](https://github.com/Joerg-ffs/Capstone-Project/tree/master/Data%20Upgrade/sample%20data)
 
 In order to combat [Catastrophic interference](https://en.wikipedia.org/wiki/Catastrophic_interference) the totality of the dataset was randomly broken into 10 segements to improve ease of use. Then the datapoints were scrambled to improve overall model performance. A total of 3.2 million frames and data points were used to train the model. 
 
