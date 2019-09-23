@@ -55,6 +55,7 @@ Due to the simple nature and limited amount of data the was trained on a MSI GE7
 Tier 2:
 
 With the addition of image data and the implimentation of [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) training the model on a laptop would not be feasible. Due to limited resources the free tool  [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true), which initalizes a jupyter notebook running on a NVIDIA TESLA K80 GPU was used. This tool was very helpful in the testing of the model as it also allows colaboration between team members however it also had frequent crashes and other issues.
+![Tier 2 Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%202/model%20performance%202.PNG)
 
 Updated Model:
 
