@@ -58,7 +58,7 @@ With the addition of image data and the implimentation of [CNN](https://towardsd
 
 Updated Model:
 
-Moving from a smaller dataset using cloud tools to a 3.2 million image dataset needed a drastic change to our training workflow. A new system was purchased to locally train the model, initally the model was trained using basic tensorflow using the keras API on a Intel Core i7-9700K CPU @ 3.60GHz. However training the model using a CPU was very time extensive, after further research into tensorflow-gpu and Nvidia CUDA drivers this method was implimented. 
+Moving from a smaller dataset using cloud tools to a 3.2 million image dataset needed a drastic change to our training workflow. A new system was purchased to locally train the model, initally the model was trained using basic tensorflow using the keras API on an [Intel Core i7-9700K CPU @ 3.60GHz](https://ark.intel.com/content/www/us/en/ark/products/186604/intel-core-i7-9700k-processor-12m-cache-up-to-4-90-ghz.html). However training the model using a CPU was very time extensive, after further research into tensorflow-gpu and Nvidia CUDA drivers this method was implimented. 
 
 Please note setting up a non-linux based tensorflow GPU enviroment in this case Windows 10 is a very convoluted process proceed with caution.
 
