@@ -1,17 +1,17 @@
 # Capstone-Project
 Distracted Driving Detection using Python.
 
-## First Prototype
+# First Prototype
 Used an XBOX controller with the game "Track Mania" into a Extremely Randomized Trees (ERT) model to detect distracted driving.
 
 To use this prototype check out the prototype folder.
 
 Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9tYzt1Xt7s/view)
 
-## Final Prototype
+# Final Prototype
 The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the Extreme Random Forest model similarly to the initial prototype.
 
-## Tier 1
+# Tier 1
 This project uses the Logitech G920 Racing Wheel and acompanying pedals to capture inputs. However, any racing wheel or other form of input can be used as long as the event codes are properly mapped using device_config.py.
 
 To start collecting data, use Inputs_G920.py in the Tier 1 folder. This file will output a folder of images as well as a csv file containg image paths and corrosponding angles.
@@ -22,7 +22,7 @@ Sample data can be found here: [images](https://drive.google.com/file/d/1ZrqJtPq
 
 These inputs are then loaded into Tier_1_Training.ipynb in the Tier 1 folder. Once the notebook is completed, the last output is a model file containing the weights and structure of the CNN. An example is Tier_1_Model.h5.
 
-## Tier 2
+# Tier 2
 
 The .h5 file is then used in Inputs_G920_Distraction.py in the Tier 2 folder. This will generate a csv file containing actual and predicted angles as well as gas and brake values. An example csv is [here](https://drive.google.com/open?id=1r5CpDfeUh8HH-mqdJl6BhRxLJxrpq-4C)
 
@@ -32,7 +32,7 @@ Both model files are used in Real_Time_Prediction.py to predict distraction leve
 
 Demo video of final prototype found [here](https://drive.google.com/open?id=1Q2nekokL9cWF7Bn4HbtTa8DLEzJBVpIU)
 
-## Data Upgrade
+# Data Upgrade
 
 The next level of the models development transitions from using Euro Truck Simulator to real world test data. The data is 300 hours of commuting along California highways and can be found [here](https://github.com/commaai/comma2k19) 
 
@@ -43,21 +43,21 @@ In order to combat [Catastrophic interference](https://en.wikipedia.org/wiki/Cat
 
 After adjusting the model weights a final correlation between raw and predicted angles reached 95% providing a very accurate prediction which can then be fed into the distraction model.
 
-## Training Methods
+# Training Methods
 
-# Prototype:
+## Prototype:
 
 The first prototype of the model simply used the python library sk-learn, the following models were tested:
 ![Model Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Prototype/model%20performance.PNG)
 
 Due to the simple nature and limited amount of data the was trained on a MSI GE72 2QD Apache Pro using the i7-4700HQ CPU for full specs click [here](https://www.msi.com/Laptop/GE72-2QD-Apache-Pro)
 
-# Tier 2:
+## Tier 2:
 
 With the addition of image data and the implimentation of [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) training the model on a laptop would not be feasible. Due to limited resources the free tool  [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true), which initalizes a jupyter notebook running on a NVIDIA TESLA K80 GPU was used. This tool was very helpful in the testing of the model as it also allows colaboration between team members however it also had frequent crashes and other issues.
 ![Tier 2 Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%202/model%20performance%202.PNG)
 
-# Updated Model:
+## Updated Model:
 
 Moving from a smaller dataset using cloud tools to a 3.2 million image dataset needed a drastic change to our training workflow. A new system was purchased to locally train the model, initally the model was trained using basic tensorflow using the keras API on an [Intel Core i7-9700K CPU @ 3.60GHz](https://ark.intel.com/content/www/us/en/ark/products/186604/intel-core-i7-9700k-processor-12m-cache-up-to-4-90-ghz.html). However training the model using a CPU was very time extensive, after further research into tensorflow-gpu and Nvidia CUDA drivers this method was implimented. 
 
