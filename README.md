@@ -16,7 +16,7 @@ This project uses the Logitech G920 Racing Wheel and acompanying pedals to captu
 
 To start collecting data, use Inputs_G920.py in the Tier 1 folder. This file will output a folder of images as well as a csv file containg image paths and corrosponding angles.
 
-#### Please note: This project will only function using Ubuntu due to the usage of evdev python library for input polling.
+#### Please note: The prototypes will only function using Ubuntu due to the usage of evdev python library for input polling.
 
 Sample data can be found here: [images](https://drive.google.com/file/d/1ZrqJtPqAVVuZAycNJN9hl2rEKFiiJ80-/view) and [csv](https://drive.google.com/file/d/1996maLE5TBk1y27EInuKVQmH3TUtaa3F/view?usp=sharing)
 
@@ -30,7 +30,7 @@ This csv file is usedin Tier_2_Training.ipynb to create another model file in a 
 
 Both model files are used in Real_Time_Prediction.py to predict distraction levels real time.
 
-Demo video of final prototype found [here](https://drive.google.com/file/d/1Q2nekokL9cWF7Bn4HbtTa8DLEzJBVpIU/view)
+Demo video of final prototype found [here](https://drive.google.com/open?id=1Q2nekokL9cWF7Bn4HbtTa8DLEzJBVpIU)
 
 ## Data Upgrade
 
