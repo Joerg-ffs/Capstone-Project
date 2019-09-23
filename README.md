@@ -45,19 +45,19 @@ After adjusting the model weights a final correlation between raw and predicted 
 
 ## Training Methods
 
-Prototype:
+#Prototype:
 
 The first prototype of the model simply used the python library sk-learn, the following models were tested:
 ![Model Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Prototype/model%20performance.PNG)
 
 Due to the simple nature and limited amount of data the was trained on a MSI GE72 2QD Apache Pro using the i7-4700HQ CPU for full specs click [here](https://www.msi.com/Laptop/GE72-2QD-Apache-Pro)
 
-Tier 2:
+#Tier 2:
 
 With the addition of image data and the implimentation of [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) training the model on a laptop would not be feasible. Due to limited resources the free tool  [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true), which initalizes a jupyter notebook running on a NVIDIA TESLA K80 GPU was used. This tool was very helpful in the testing of the model as it also allows colaboration between team members however it also had frequent crashes and other issues.
 ![Tier 2 Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%202/model%20performance%202.PNG)
 
-Updated Model:
+#Updated Model:
 
 Moving from a smaller dataset using cloud tools to a 3.2 million image dataset needed a drastic change to our training workflow. A new system was purchased to locally train the model, initally the model was trained using basic tensorflow using the keras API on an [Intel Core i7-9700K CPU @ 3.60GHz](https://ark.intel.com/content/www/us/en/ark/products/186604/intel-core-i7-9700k-processor-12m-cache-up-to-4-90-ghz.html). However training the model using a CPU was very time extensive, after further research into tensorflow-gpu and Nvidia CUDA drivers this method was implimented. 
 
@@ -65,6 +65,8 @@ Please note setting up a non-linux based tensorflow GPU enviroment in this case 
 
 Once the tensorflow GPU process was configured properly we were able to run batches of 75-100k images at a time dratically improving our training workflow. The GPU used was the [Nvidia Geforce RTX 2070](https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2070/). 
 
-Without any further data manipulation the results can be seen below:
+Without any further data manipulation the correlation for ~100,000 samples is 89.7% when comparing prediction and actual steering angles. When looking at a 15 frame rolling average the correlation goes to to 95%.
+
+The results can be seen below:
 ![Model 3](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Data%20Upgrade/Model%203%20graph.png)
 
