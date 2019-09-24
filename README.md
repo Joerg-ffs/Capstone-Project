@@ -65,7 +65,9 @@ Please note setting up a non-linux based tensorflow GPU enviroment in this case 
 
 Once the tensorflow GPU process was configured properly we were able to run batches of 75-100k images at a time dratically improving our training workflow. The GPU used was the [Nvidia Geforce RTX 2070](https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2070/). 
 
-Without any further data manipulation the correlation for ~100,000 samples is 89.7% when comparing prediction and actual steering angles. When looking at a 15 frame rolling average the correlation goes to to 95%.
+Without any further data manipulation the correlation for ~100,000 samples is 89.7% when comparing prediction and actual steering angles. When looking at a 15 frame rolling average the correlation goes to to 95%. 
+
+A Demo video can be viewed [here](https://www.youtube.com/watch?v=Yc29toeH98M&feature=youtu.be)
 
 The results can be seen below:
 ![Model 3](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Data%20Upgrade/Model%203%20graph.png)
