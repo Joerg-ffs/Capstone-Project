@@ -80,6 +80,8 @@ There are three critical steps in the development of this project, firstly updat
 ## Distraction model update:
 Going forward an updated version of the tier 2 model needs to be developed, this poses a difficult challenge because acquiring real world distracted driving in an enthical manner is difficult. The best course of action seems to be simulating the distraction data using our past knowledge from the previous models and then iterating on the model until real world outputs are accurate. 
 
+UPDATE: Through the use of driving simulators and controlled distraction experiments a dataset has been combined with the upgraded dataset in order to make a model capable of detecting real world distraction events while driving.
+
 ## Implimenting physical data extraction:
 At this point the plan of action is to utilze the [panda OBD2 interface](https://comma.ai/shop/products/panda-obd-ii-dongle) which is a state of the art OBD2 extraction tool that can live stream data via USB or wifi at rates much higher then industry standards. From the OBD2 port we will use a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) which is an inexpensive micro computer that can run both the tier 1 and 2 models. Finally a forward facing [Pi Camera](https://www.raspberrypi.org/products/camera-module-v2/) will live stream the image data to the Pi 4. 
 
