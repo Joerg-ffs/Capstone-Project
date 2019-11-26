@@ -1,14 +1,14 @@
 # Capstone-Project
 Distracted Driving Detection using Python.
 
-# First Prototype
+# First Prototype:
 Used an XBOX controller with the game "Track Mania" into a Extremely Randomized Trees (ERT) model to detect distracted driving.
 
 To use this prototype check out the prototype folder.
 
 Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9tYzt1Xt7s/view)
 
-# Second Prototype
+# Second Prototype:
 The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the Extreme Random Forest model similarly to the initial prototype.
 
 # Tier 1
@@ -89,8 +89,6 @@ After applying the changes the results of the updated model in accordance to the
 # Next Steps
 
 There are three critical steps in the development of this project, firstly updating the distraction model, secondly implimenting  physical data extraction from a car, and finally creating a dashboard for visualization of the data.
-
-
 
 ## Implimenting physical data extraction:
 At this point the plan of action is to utilze the [panda OBD2 interface](https://comma.ai/shop/products/panda-obd-ii-dongle) which is a state of the art OBD2 extraction tool that can live stream data via USB or wifi at rates much higher then industry standards. From the OBD2 port we will use a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) which is an inexpensive micro computer that can run both the tier 1 and 2 models. Finally a forward facing [Pi Camera](https://www.raspberrypi.org/products/camera-module-v2/) will live stream the image data to the Pi 4. 
