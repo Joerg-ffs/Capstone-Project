@@ -77,11 +77,10 @@ The results can be seen below:
 
 ## Updated Tier 2 Model:
 
-## Distraction model update:
 Updating the version of the tier 2 model poses a difficult challenge because acquiring real world distracted driving in an enthical manner is difficult. The best course of action seems to be simulating the distraction data using our past knowledge from the previous models and then iterating on the model until real world outputs are accurate. Through the use of driving simulators and controlled distraction experiments a dataset has been combined with the upgraded dataset in order to make a model capable of detecting real world distraction events while driving.
 
 Below is a graph showing the distribution between positive distraction events and non-distracted driving.
-![Data Distribution](https://github.com/Joerg-ffs/Capstone-Project/tree/master/Final%20Prototype/Tier%202)
+![Data Distribution](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%202/tier%202%20model%20distribution.PNG)
 
 Balancing the dataset is very important to aquiring an accurate prediction model especially when the output of distracted driving is a fuzzy concept which is hard to accurately define. This prevents the model from simply guessing and reduces the likelyhood of overfitting. The data has been scaled and manipulated to be within the range of zero and one to improve performance and the outliers of the model have been scrapped to remove imporerly recorded data. This model was trained on an approximate even split of 90,000 samples of distracted driving as well as focused driving.
 
