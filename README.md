@@ -8,7 +8,7 @@ To use this prototype check out the prototype folder.
 
 Demo Video found [here](https://drive.google.com/file/d/1J2EZdBJU70OkKv2cZhLlnJ9tYzt1Xt7s/view)
 
-# Final Prototype
+# Second Prototype
 The final prototype consists of two models: a Convolutional Neural Network (CNN) as well as the Extreme Random Forest model similarly to the initial prototype.
 
 # Tier 1
