@@ -75,14 +75,23 @@ A Demo video can be viewed [here](https://www.youtube.com/watch?v=Yc29toeH98M&fe
 The results can be seen below:
 ![Model 3](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Data%20Upgrade/Model%203%20graph.png)
 
+## Updated Tier 2 Model:
+
+## Distraction model update:
+Updating the version of the tier 2 model poses a difficult challenge because acquiring real world distracted driving in an enthical manner is difficult. The best course of action seems to be simulating the distraction data using our past knowledge from the previous models and then iterating on the model until real world outputs are accurate. Through the use of driving simulators and controlled distraction experiments a dataset has been combined with the upgraded dataset in order to make a model capable of detecting real world distraction events while driving.
+
+Below is a graph showing the distribution between positive distraction events and non-distracted driving.
+![Data Distribution](https://github.com/Joerg-ffs/Capstone-Project/tree/master/Final%20Prototype/Tier%202)
+
+Balancing the dataset is very important to aquiring an accurate prediction model especially when the output of distracted driving is a fuzzy concept which is hard to accurately define. This prevents the model from simply guessing and reduces the likelyhood of overfitting. The data has been scaled and manipulated to be within the range of zero and one to improve performance and the outliers of the model have been scrapped to remove imporerly recorded data. This model was trained on an approximate even split of 90,000 samples of distracted driving as well as focused driving.
+
+After applying the changes the results of the updated model in accordance to the comma.ai dataset are:
+
 # Next Steps
 
 There are three critical steps in the development of this project, firstly updating the distraction model, secondly implimenting  physical data extraction from a car, and finally creating a dashboard for visualization of the data.
 
-## Distraction model update:
-Going forward an updated version of the tier 2 model needs to be developed, this poses a difficult challenge because acquiring real world distracted driving in an enthical manner is difficult. The best course of action seems to be simulating the distraction data using our past knowledge from the previous models and then iterating on the model until real world outputs are accurate. 
 
-UPDATE: Through the use of driving simulators and controlled distraction experiments a dataset has been combined with the upgraded dataset in order to make a model capable of detecting real world distraction events while driving.
 
 ## Implimenting physical data extraction:
 At this point the plan of action is to utilze the [panda OBD2 interface](https://comma.ai/shop/products/panda-obd-ii-dongle) which is a state of the art OBD2 extraction tool that can live stream data via USB or wifi at rates much higher then industry standards. From the OBD2 port we will use a [Raspberry Pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) which is an inexpensive micro computer that can run both the tier 1 and 2 models. Finally a forward facing [Pi Camera](https://www.raspberrypi.org/products/camera-module-v2/) will live stream the image data to the Pi 4. 
