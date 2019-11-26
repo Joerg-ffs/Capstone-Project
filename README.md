@@ -84,7 +84,7 @@ Below is a graph showing the distribution between positive distraction events an
 
 Balancing the dataset is very important to aquiring an accurate prediction model especially when the output of distracted driving is a fuzzy concept which is hard to accurately define. This prevents the model from simply guessing and reduces the likelyhood of overfitting. The data has been scaled and manipulated to be within the range of zero and one to improve performance and the outliers of the model have been scrapped to remove imporerly recorded data. This model was trained on an approximate even split of 90,000 samples of distracted driving as well as focused driving.
 
-After applying the changes the results of the updated model in accordance to the comma.ai dataset are:
+After applying the changes the results of the updated model in accordance to the comma.ai dataset improved from ~0.72 to 0.805556 with a standard deviation of 0.313532.
 
 # Next Steps
 
