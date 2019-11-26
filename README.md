@@ -58,7 +58,9 @@ Due to the simple nature and limited amount of data the was trained on a MSI GE7
 With the addition of image data and the implimentation of [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53) training the model on a laptop would not be feasible. Due to limited resources the free tool  [Google Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true), which initalizes a jupyter notebook running on a NVIDIA TESLA K80 GPU was used. This tool was very helpful in the testing of the model as it also allows colaboration between team members however it also had frequent crashes and other issues.
 ![Tier 2 Performance](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%202/model%20performance%202.PNG)
 
-## Updated Model:
+## Updated Tier 1 Model:
+
+![LeNet Style Rendering of updated Tier 1 Model](https://github.com/Joerg-ffs/Capstone-Project/blob/master/Final%20Prototype/Tier%201/NN%20diagram%20LeNet%20style1.PNG)
 
 Moving from a smaller dataset using cloud tools to a 3.2 million image dataset needed a drastic change to our training workflow. A new system was purchased to locally train the model, initally the model was trained using basic tensorflow using the keras API on an [Intel Core i7-9700K CPU @ 3.60GHz](https://ark.intel.com/content/www/us/en/ark/products/186604/intel-core-i7-9700k-processor-12m-cache-up-to-4-90-ghz.html). However training the model using a CPU was very time extensive, after further research into tensorflow-gpu and Nvidia CUDA drivers this method was implimented. 
 
